@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html">
-    <h:body>
-    	<h:form>
-        	<h:inputText value="test"/>        
-	    </h:form>
-    </h:body>
+    xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <head jsf:id="head">
+        <title>JSF 2.2 With HTML5</title>
+    </head>
+    <body jsf:id="body">
+        <form jsf:id="form" jsf:prependId="false">
+            <input jsf:value="#{helloManageBean.email}" jsf:id="email" type="email"
+                placeholder="Type your email" />
+            <button>Send</button>
+            <p>Your email is: #{helloManageBean.email}</p>
+        </form>
+    </body>
 </html>
